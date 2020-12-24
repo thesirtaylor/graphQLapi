@@ -18,11 +18,14 @@ const {createComplexityLimitRule} = require("graphql-validation-complexity")
 app.use(helmet());
 app.use(cors());
 mongoose
-  .connect(`mongodb://localhost:27017/notedly`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-  })
+  .connect(
+    `mongodb+srv://ajayiolatunjiolaide:kP1plexP7XjE11Xy@cluster0.05xxq.mongodb.net/notedly?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true
+    }
+  )
   .then(() => {
     app.listen({ port }, () =>
       console.log(`GraphQL http://localhost:${port}${server.graphqlPath}`)

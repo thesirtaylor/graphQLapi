@@ -3,7 +3,7 @@ const models = require("../models/index");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { AuthenticationError, ForbidddenError, ForbiddenError } = require("apollo-server-express");
+const { AuthenticationError, ForbiddenError } = require("apollo-server-express");
 const gravatar = require("../util/gravatar");
 
 module.exports = {
