@@ -19,7 +19,7 @@ app.use(helmet());
 app.use(cors());
 mongoose
   .connect(
-    `mongodb+srv://ajayiolatunjiolaide:kP1plexP7XjE11Xy@cluster0.05xxq.mongodb.net/notedly?retryWrites=true&w=majority`,
+    process.env.DB_HOST,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
